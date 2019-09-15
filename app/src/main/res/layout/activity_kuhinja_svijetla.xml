@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_kitchen_light"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.tomislav.pametnakucaversion01.MainActivity"
+    android:background="@android:color/background_light">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="244dp"
+            app:srcCompat="@drawable/k" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="122dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/light"
+                android:layout_width="123dp"
+                android:layout_height="116dp"
+                android:background="@drawable/zarulja3"
+                android:cropToPadding="true"
+                android:elevation="0dp"
+                android:onClick="kitchenLight"
+                android:scaleType="fitCenter" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/light2"
+                android:layout_width="133dp"
+                android:layout_height="116dp"
+                android:background="@drawable/zarulja3"
+                android:onClick="kitchenLight2"
+                android:scaleType="fitCenter" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="233dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/plug1"
+                android:layout_width="123dp"
+                android:layout_height="116dp"
+                android:background="@drawable/uticnica"
+                android:cropToPadding="true"
+                android:elevation="0dp"
+                android:onClick="kitchenPlug1"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/plug2"
+                android:layout_width="133dp"
+                android:layout_height="116dp"
+                android:background="@drawable/uticnica"
+                android:onClick="kitchenPlug2"
+                android:scaleType="fitCenter" />
+            <ImageButton
+                android:id="@+id/plug3"
+                android:layout_width="133dp"
+                android:layout_height="116dp"
+                android:background="@drawable/uticnica"
+                android:onClick="kitchenPlug3"
+                android:scaleType="fitCenter" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></LinearLayout>
+</RelativeLayout>
