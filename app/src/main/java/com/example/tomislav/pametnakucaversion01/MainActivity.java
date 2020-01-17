@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void kitchen(View view) {
-        Intent kuh = new Intent(MainActivity.this, KitchenLightActivity.class);
-        startActivity(kuh);
+        Intent kit = new Intent(this, KitchenLightActivity.class);
+        startActivity(kit);
     }
 }

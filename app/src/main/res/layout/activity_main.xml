@@ -11,32 +11,41 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:orientation="vertical"
         android:background="@drawable/coustom_main_backgraund_color"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="41dp"
         tools:layout_editor_absoluteY="0dp">
 
-       //prvi red
+        //prvi red
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:background="@android:color/transparent"
             android:orientation="horizontal">
+
             <LinearLayout
                 android:layout_width="150dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/transparent"
                 android:orientation="horizontal">
-            <ImageButton
-                android:id="@+id/btn_dnevni"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:src="@drawable/button_style"
-                android:background="@drawable/dnevniicon"
-                android:onClick="dnevni"
-                tools:layout_editor_absoluteX="180dp"
-                tools:layout_editor_absoluteY="146dp"
-                android:contentDescription="TODO" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/btn_dnevni"
+                    android:layout_width="118dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/dnevniicon"
+                    android:contentDescription="TODO"
+                    android:onClick="dnevni"
+                    android:src="@drawable/button_style"
+                    tools:layout_editor_absoluteX="180dp"
+                    tools:layout_editor_absoluteY="146dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -50,23 +59,24 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="150dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/transparent"
                 android:orientation="horizontal">
 
-            <ImageButton
-                android:id="@+id/btn_spavaca"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:src="@drawable/button_style"
-                android:background="@drawable/spavacaicon"
-                android:onClick="spavaca"
-                tools:layout_editor_absoluteX="180dp"
-                tools:layout_editor_absoluteY="376dp"
-                android:contentDescription="TODO" />
+                <ImageButton
+                    android:id="@+id/btn_spavaca"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/spavacaicon"
+                    android:contentDescription="TODO"
+                    android:onClick="spavaca"
+                    android:src="@drawable/button_style"
+                    tools:layout_editor_absoluteX="180dp"
+                    tools:layout_editor_absoluteY="376dp" />
             </LinearLayout>
         </LinearLayout>
         //razmak
@@ -80,11 +90,13 @@
         </LinearLayout>
 
         //drugi red
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:background="@android:color/transparent"
             android:orientation="horizontal">
+
             <LinearLayout
                 android:layout_width="150dp"
                 android:layout_height="match_parent"
@@ -96,13 +108,14 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:src="@drawable/button_style"
                     android:background="@drawable/kuhinjaicon"
-                    android:onClick="kuhinja"
+                    android:contentDescription="TODO"
+                    android:onClick="kitchen"
+                    android:src="@drawable/button_style"
                     tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="16dp"
-                    android:contentDescription="TODO" />
+                    tools:layout_editor_absoluteY="16dp" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="40dp"
                 android:layout_height="match_parent"
@@ -121,19 +134,18 @@
                 android:background="@android:color/transparent"
                 android:orientation="horizontal">
 
-            <ImageButton
-                android:id="@+id/btn_kupaona"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:src="@drawable/button_style"
-                android:background="@drawable/kupaonaicon"
-                android:onClick="kupaona"
-                android:text="@string/kupaona"
-                android:textColorLink="@android:color/holo_green_dark"
-                tools:layout_editor_absoluteX="0dp"
-                tools:layout_editor_absoluteY="251dp"
-                 />
+                <ImageButton
+                    android:id="@+id/btn_kupaona"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/kupaonaicon"
+                    android:onClick="kupaona"
+                    android:src="@drawable/button_style"
+                    android:text="@string/kupaona"
+                    android:textColorLink="@android:color/holo_green_dark"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="251dp" />
             </LinearLayout>
         </LinearLayout>
 
@@ -146,28 +158,30 @@
             android:orientation="horizontal"></LinearLayout>
 
         //treći red
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:background="@android:color/transparent"
             android:orientation="horizontal">
+
             <LinearLayout
                 android:layout_width="150dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/transparent"
                 android:orientation="horizontal">
 
-            <ImageButton
-                android:id="@+id/btn_uredaji"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:src="@drawable/button_style"
-                android:background="@drawable/uticnice"
-                android:onClick="svi_uredaji"
-                tools:layout_editor_absoluteX="200dp"
-                tools:layout_editor_absoluteY="16dp"
-                android:contentDescription="TODO" />
+                <ImageButton
+                    android:id="@+id/btn_uredaji"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/uticnice"
+                    android:contentDescription="TODO"
+                    android:onClick="svi_uredaji"
+                    android:src="@drawable/button_style"
+                    tools:layout_editor_absoluteX="200dp"
+                    tools:layout_editor_absoluteY="16dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -181,6 +195,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="150dp"
                 android:layout_height="match_parent"
@@ -192,12 +207,11 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:src="@drawable/button_style"
                     android:background="@drawable/svjetla"
                     android:onClick="sva_svjetla"
+                    android:src="@drawable/button_style"
                     tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="146dp"
-                     />
+                    tools:layout_editor_absoluteY="146dp" />
             </LinearLayout>
 
         </LinearLayout>

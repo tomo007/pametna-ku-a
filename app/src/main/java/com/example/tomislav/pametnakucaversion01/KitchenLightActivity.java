@@ -1,11 +1,13 @@
 package com.example.tomislav.pametnakucaversion01;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ProgressBar;
 
 
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
@@ -24,16 +26,20 @@ public class KitchenLightActivity extends AppCompatActivity {
     MqttHelper mqttHelper;
     ImageButton lightButton,light2Button,plugButton,plug2Button,plug3Button;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        startMqtt();
         setContentView(R.layout.activity_kuhinja_svijetla);
+        startMqtt();
         lightButton=(ImageButton)findViewById(R.id.light);
         light2Button=(ImageButton)findViewById(R.id.light2);
         plugButton=(ImageButton)findViewById(R.id.plug1);
         plug2Button=(ImageButton)findViewById(R.id.plug2);
         plug3Button=(ImageButton)findViewById(R.id.plug3);
+
+
+
 
         if(flagLight)
             lightButton.setBackground(getResources().getDrawable(R.drawable.zarulja3));
@@ -68,7 +74,7 @@ public class KitchenLightActivity extends AppCompatActivity {
         String topic = "house/kitchen/light1";
 
         if(flagLight==true){
-            view.setBackground(getResources().getDrawable(R.drawable.zarulja2));
+            view.setBackground(getResources().getDrawable(R.drawable.zarulja3));
 
             String payload = "on";
             byte[] encodedPayload = new byte[0];
@@ -83,7 +89,7 @@ public class KitchenLightActivity extends AppCompatActivity {
             flagLight=false;
 
         }else {
-            view.setBackground(getResources().getDrawable(R.drawable.zarulja3));
+            view.setBackground(getResources().getDrawable(R.drawable.zarulja2));
             String payload = "off";
             byte[] encodedPayload = new byte[0];
             try {
@@ -103,7 +109,7 @@ public class KitchenLightActivity extends AppCompatActivity {
         String topic = "house/kitchen/light2";
 
         if(flagLight2==true){
-            view.setBackground(getResources().getDrawable(R.drawable.zarulja2));
+            view.setBackground(getResources().getDrawable(R.drawable.zarulja3));
 
             String payload = "on";
             byte[] encodedPayload = new byte[0];
@@ -118,7 +124,7 @@ public class KitchenLightActivity extends AppCompatActivity {
             flagLight2=false;
 
         }else {
-            view.setBackground(getResources().getDrawable(R.drawable.zarulja3));
+            view.setBackground(getResources().getDrawable(R.drawable.zarulja2));
         String payload = "off";
         byte[] encodedPayload = new byte[0];
         try {
@@ -181,6 +187,12 @@ public class KitchenLightActivity extends AppCompatActivity {
             view.setBackground(getResources().getDrawable(R.drawable.uticnica));
             flagPlug1=true;
         }
+
+    }
+    public void buttonTv(View view) {
+
+        Intent tv = new Intent(KitchenLightActivity.this, TVActivity.class);
+        startActivity(tv);
 
     }
     public void kitchenPlug2(View view) {
